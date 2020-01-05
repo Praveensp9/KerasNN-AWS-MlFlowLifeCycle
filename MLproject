@@ -1,0 +1,11 @@
+name: kerasmllifecycle
+
+docker_env:
+  image:  ml-life-cycle
+
+entry_points:
+  main:
+    parameters:
+      epoch: int
+      batchsize: {type: int, default: 500}
+    command: "python MlFlowModel.py --epoch {epoch} --batchsize {batchsize}"
